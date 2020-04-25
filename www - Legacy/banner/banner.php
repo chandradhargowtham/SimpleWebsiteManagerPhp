@@ -16,9 +16,10 @@ fclose($file)
 ?>
 <!DOCTYPE html>
 <html>
+<div class="BannerContainer">
 <h1><?php echo "$quote"; ?></h1>
-<h2></h2>
 <img id="img" src="images/banner/1.jpg" alt = "Banner Image"  width=100%>
+</div>
 
 </html>
 
@@ -30,28 +31,58 @@ img
 	z-index: 1;
 	position: relative;
 }
-h1,h2
+h1
 {
 	z-index: 2;
 	position: absolute;
 	color: white;
 	font-size: 2.5em;
-	top: 52%;
+	width: 80%;
+	top:50%;
 	left:10%;
-	
-	-webkit-text-size-adjust:80%;
-
-}
-h2
-{
-font-size: 2em;	!important;
+	display: block;
 }
 
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    transform: scale(0.5,0.5);
+    color:white;
+    overflow: hidden;
+    top:80%;
+    left:10%;
+    display: block;
+  }
+}
+@media only screen and (max-height: 500px) , (max-width: 400px) {
+  h1 {
+    transform: scale(0.3,0.3);
+    color:white;
+    overflow: hidden;
+    top:80%;
+    left:10%;
+    display: block;
+  }
+}
+@media only screen and (max-height: 400px), (max-width: 200px) {
+  h1 {
+    transform: scale(0.3,0.3);
+    color:red;
+    overflow: hidden;
+    top:80%;
+    display: none;
+  }
+}
 </style>
 <script language="javascript">
         function autoResizeDiv()
         {
             document.getElementById('img').style.height = window.innerHeight-220 +'px';
+            
+            ifdocument.getElementById('h1').style.height >(document.getElementById('img').style.height)
+            {
+            	document.getElementById('h1').style.display = "none";
+            }
         }
         window.onresize = autoResizeDiv;
         autoResizeDiv();

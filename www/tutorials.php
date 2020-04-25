@@ -1,5 +1,7 @@
 
 <?php include "header/header.html" ?>
+<?php include "pageGenerator.php" ?>
+
 
 
 
@@ -25,16 +27,20 @@ for($i=2;$i<9999;$i++)
 
 	$path= "articles/$a[$i]";
 	echo "<div class = article>";
-	echo "<h1>".substr($a[$i], 0,strpos($a[$i], "-"))."</h1>";
+	echo '<p class="category">'.substr($a[$i], 0,strpos($a[$i], "-")).'</p>';
 echo "<p>".substr($a[$i], 0,strlen($a[$i])-5)."</p>";
-echo '<a href="' . $path . '">'."Go to Article".'</a>';
+$str=generatePage($a[$i]);
+
+echo '<a href="'.$str.'">'."Go to Article".'</a>';
+
 echo "</div>";
-	if($i%3==0)
+	if($i%4==0)
 	{
 		echo "<br>";
 	}
+
 }
-	
+
 
 
 ?>

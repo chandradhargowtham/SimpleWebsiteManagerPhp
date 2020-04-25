@@ -1,5 +1,6 @@
 <?php include "header/header.html" ?>
 <?php include "banner/banner.php" ?>
+<?php include "recentArticles/recentArticles.php" ?>
 <?php include "footer/footer.html" ?>
 
 <html>
