@@ -3,7 +3,7 @@
 <html>
 <link href="style.css" type = "text/css" rel="stylesheet">
 <form action = search.php method = "GET">
-<p>Select the category and enter the search query</p>
+<p>Enter the search query</p>
 <input type="text" name = "search">
 <input type="submit" value="Search">
 </form>
