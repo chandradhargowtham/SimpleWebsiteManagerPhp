@@ -2,6 +2,7 @@
 <?php include "header/header.html" ?>
 
 <html>
+<title>Admin Tools</title>
 <body>
   <form method="POST" action="admintools.php">
 
@@ -11,9 +12,12 @@
 
  <div>
   <h2>Your content!</h2>
-   <form action="">
+   <form action="admintools.php" method="POST">
      <div>
-       <input type="text" placeholder="title" name="title">
+      Enter Page Passphrase: <input type="password" placeholder="Passphrase" name="passphrase">
+      <br><br>
+       Enter Page Title: <input type="text" placeholder="Page Title" name="title">
+
      </div>
      <div>
          <select name="type">
@@ -38,14 +42,15 @@
 </html>
 
 <?php 
-if($_SESSION["login"]==true)
-if(isset($_GET["title"]))
+if(isset($_POST["title"]))
 {
+
   extract($_REQUEST);
-    $type=$_GET["type"];
-    $title=$_GET["title"];
-    $ArticleCategory = $_GET["ArticleCategory"];
-    $articleContent=$_GET["content"];
+    $type=$_POST["type"];
+    $title=$_POST["title"];
+    $password=$_POST["passphrase"];
+    $ArticleCategory = $_POST["ArticleCategory"];
+    $articleContent=$_POST["content"];
 
     $headingPartStart = "<h1>";
     $headingPartEnd = "</h1>";
@@ -54,6 +59,8 @@ if(isset($_GET["title"]))
     $bodyPartEnd= "</p>";
 
 
+  if($password=="password")
+  {
   if($type=="codesnippets")
   {
   
@@ -103,7 +110,15 @@ if(isset($_GET["title"]))
     fwrite($content, "</html>");
     fclose($content);
   }
+  echo "Successfully created $type item";
 }
+else
+{
+  echo "Wrong Passphrase";
+}
+
+}
+
 
 ?>
 
