@@ -31,9 +31,9 @@ $t=scandir("tutorials/");
 
 for($i=2;$i<9999;$i++)
 {
-  if(empty($t[$i]))
+	if(empty($t[$i]))
 {
-  break;
+	break;
 }
 
     $path= "tutorials/$t[$i]";
@@ -60,10 +60,10 @@ echo"</div>";
 echo" </div>";
 echo"</section>";
 
-  if($i%3==0)
-  {
-    echo "<br>";
-  }
+	if($i%3==0)
+	{
+		echo "<br>";
+	}
 }
 ?>
 </html>

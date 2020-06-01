@@ -2,7 +2,6 @@
 <?php include "header/header.html" ?>
 
 <html>
-<title>Admin Tools</title>
 <body>
   <form method="POST" action="admintools.php">
 
@@ -70,9 +69,10 @@ if(isset($_POST["title"]))
     
     $headingVar= $headingPartStart.$title.$headingPartEnd;
     $bodyVar = $bodyPartStart.$articleContent.$bodyPartEnd;
-
+    $cssVar =   '<link href="articlesStyle.css" type = "text/css" rel="stylesheet">';
 
     fwrite($content, "<html>");
+    fwrite($content,  $cssVar );
     fwrite($content, $headingVar);
     fwrite($content, $bodyVar);
     fwrite($content, "</html>");
@@ -85,9 +85,10 @@ if(isset($_POST["title"]))
     
     $headingVar= $headingPartStart.$title.$headingPartEnd;
     $bodyVar = $bodyPartStart.$articleContent.$bodyPartEnd;
-
+    $cssVar =   '<link href="articlesStyle.css" type = "text/css" rel="stylesheet">';
 
     fwrite($content, "<html>");
+    fwrite($content,  $cssVar );
     fwrite($content, $headingVar);
     fwrite($content, $bodyVar);
     fwrite($content, "</html>");
@@ -102,9 +103,10 @@ if(isset($_POST["title"]))
     
     $headingVar= $headingPartStart.$title.$headingPartEnd;
     $bodyVar = $bodyPartStart.$articleContent.$bodyPartEnd;
-
+      $cssVar =   '<link href="articlesStyle.css" type = "text/css" rel="stylesheet">';
 
     fwrite($content, "<html>");
+    fwrite($content,  $cssVar );
     fwrite($content, $headingVar);
     fwrite($content, $bodyVar);
     fwrite($content, "</html>");

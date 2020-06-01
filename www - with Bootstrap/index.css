@@ -4,6 +4,7 @@
 
 .container {
     max-width: 960px;
+    
 }
 
 
@@ -46,6 +47,7 @@
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 8px 40px #00000040;
     opacity: 1;
+    display: inline-block;
 }
 
 #codesnippetsheader {
