@@ -31,9 +31,9 @@ $t=scandir("tutorials/");
 
 for($i=2;$i<9999;$i++)
 {
-	if(empty($t[$i]))
+  if(empty($t[$i]))
 {
-	break;
+  break;
 }
 
     $path= "tutorials/$t[$i]";
@@ -50,7 +50,7 @@ for($i=2;$i<9999;$i++)
                 echo"<p class=card-text mb-auto>"; 
                 echo "</p>";
                 $str=generatePage($t[$i],"tutorials");
-                echo '<a href=".'.$str.'">'."Go to Tutorial".'</a>';
+                echo '<a href="'.$str.'">'."Go to Article".'</a>';
                 //echo '<a type=button class=btn btn-outline-dark href="' . $path . '">'."Read More".'</a>';   
               echo"</div>";
       echo"</div>";
@@ -60,10 +60,10 @@ echo"</div>";
 echo" </div>";
 echo"</section>";
 
-	if($i%3==0)
-	{
-		echo "<br>";
-	}
+  if($i%3==0)
+  {
+    echo "<br>";
+  }
 }
 ?>
 </html>
