@@ -62,7 +62,7 @@ if(isset($_POST["title"]))
     $bodyPartEnd= "</p>";
 
 
-  if($password=="P0rap@ndi")
+  if($password=="password")
   {
   if($type=="codesnippets")
   {
