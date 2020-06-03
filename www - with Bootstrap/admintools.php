@@ -36,11 +36,15 @@
      </div>
      <input type="submit" value="Publish">
   </form>
+  <p><br><br><a href="addCodeSnippet.php" target="_blank">Click here </a>to add a code snippet.</p>
+  <p><br><br><a href="image.php" target="_blank">Click here </a>to upload and add an image.</p>
+
  </div>
 </body>
 </html>
 
 <?php 
+
 if(isset($_POST["title"]))
 {
 
@@ -58,7 +62,7 @@ if(isset($_POST["title"]))
     $bodyPartEnd= "</p>";
 
 
-  if($password=="password")
+  if($password=="P0rap@ndi")
   {
   if($type=="codesnippets")
   {
@@ -102,8 +106,22 @@ if(isset($_POST["title"]))
 
     
     $headingVar= $headingPartStart.$title.$headingPartEnd;
-    $bodyVar = $bodyPartStart.$articleContent.$bodyPartEnd;
+    
       $cssVar =   '<link href="articlesStyle.css" type = "text/css" rel="stylesheet">';
+
+      
+       
+        
+        if(strpos($articleContent, "\n"))
+        {
+          $newBody=str_replace("\n","<br>",$articleContent);    
+        }
+        
+        
+        
+      
+      $bodyVar = $bodyPartStart.$newBody.$bodyPartEnd;
+      
 
     fwrite($content, "<html>");
     fwrite($content,  $cssVar );

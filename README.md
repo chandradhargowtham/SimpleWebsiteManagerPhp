@@ -21,6 +21,7 @@ Current functionalities:
 5. Search functionality available (Not efficient but works).
 6. Admintools page creates posts - currently 3 categories (articles/tutorials/code snippets) - can edit anytime as per the user's requirement.
 7. Admin tools page is password protected (default password is 'password'(without quotes)).
+8. We can upload and add images,code snippets(textarea) to the created pages.
 
 Upcoming features:
 1. Multiple JS slides and scrolls for use- just include the file name in index.php and replace the images.
