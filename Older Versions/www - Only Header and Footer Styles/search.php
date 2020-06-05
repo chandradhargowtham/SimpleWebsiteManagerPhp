@@ -1,8 +1,5 @@
 <?php include "header/header.php" ?>
 <?php include "pageGenerator.php" ?>
-<?php
-echo "Click on the Search Symbol and press enter to search";
-?>
 <html>
     <link rel="stylesheet" href="search.css">
 </html>
@@ -52,7 +49,7 @@ for($i=2;$i<9999;$i++)
 
 $str=generatePage($a[$i],$folderName);
 
-
+//echo "OMG";
 if(stripos($str, $searchQuery))
 	{
 	$path= "codesnippets/$a[$i]";

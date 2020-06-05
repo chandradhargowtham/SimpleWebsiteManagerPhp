@@ -1,5 +1,6 @@
 <?php include "header/header.php" ?>
 <?php include "pageGenerator.php" ?>
+<?php include "Styles/ArticleColor.php" ?>
 <html>
 <title>Code Snippets</title>
 <?php 
@@ -25,7 +26,8 @@ for($i=2;$i<9999;$i++)
        echo "<div class=col-md-4 col-xs-12>";
             echo"<div class=card flex-md-row mb-4 box-shadow h-md-250>";
                echo "<div class=card-body d-flex flex-column align-items-start>";
-               echo" <strong class=d-inline-block mb-2 text-primary>".substr($c[$i], 0,strpos($c[$i], "-"))."</strong>";
+               $randColor=generateRand(substr($c[$i], 0,strpos($c[$i], "-")));
+               echo" <strong class=$randColor>".substr($c[$i], 0,strpos($c[$i], "-"))."</strong>";
                echo"<h3 class=mb-0><p class=text-dark>".substr($c[$i], 0,strlen($c[$i])-5)."</p></h3>";
 
               echo"<div class=codesnippetscontent>";

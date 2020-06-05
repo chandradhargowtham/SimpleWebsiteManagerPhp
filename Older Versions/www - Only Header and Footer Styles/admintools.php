@@ -78,18 +78,12 @@ if(isset($_POST["title"]))
     $articleName= $ArticleCategory." - ".$title;
     $content=fopen("$type/$articleName.html","w");
 
-    $pageTitle='<head><title>'.'$title'.'</title></head>';
+    
     $headingVar= $headingPartStart.$title.$headingPartEnd;
     $bodyVar = $bodyPartStart.$articleContent.$bodyPartEnd;
     $cssVar =   '<link href="articlesStyle.css" type = "text/css" rel="stylesheet">';
 
-if(strpos($articleContent, "\n"))
-        {
-          $newBody=str_replace("\n","<br>",$articleContent);    
-        }
-    $bodyVar = $bodyPartStart.$newBody.$bodyPartEnd;
     fwrite($content, "<html>");
-    fwrite($content, $pageTitle);
     fwrite($content,  $cssVar );
     fwrite($content, $headingVar);
     fwrite($content, $bodyVar);
@@ -100,18 +94,12 @@ if(strpos($articleContent, "\n"))
   $articleName= $ArticleCategory." - ".$title;
     $content=fopen("$type/$articleName.html","w");
 
-    $pageTitle='<head><title>'.'$title'.'</title></head>';
+    
     $headingVar= $headingPartStart.$title.$headingPartEnd;
     $bodyVar = $bodyPartStart.$articleContent.$bodyPartEnd;
     $cssVar =   '<link href="articlesStyle.css" type = "text/css" rel="stylesheet">';
 
-if(strpos($articleContent, "\n"))
-        {
-          $newBody=str_replace("\n","<br>",$articleContent);    
-        }
-$bodyVar = $bodyPartStart.$newBody.$bodyPartEnd;
     fwrite($content, "<html>");
-    fwrite($content, $pageTitle);
     fwrite($content,  $cssVar );
     fwrite($content, $headingVar);
     fwrite($content, $bodyVar);
@@ -121,7 +109,6 @@ $bodyVar = $bodyPartStart.$newBody.$bodyPartEnd;
   } 
   elseif($type=="articles")
   {
-    $pageTitle='<head><title>'.'$title'.'</title></head>';
     $articleName= $ArticleCategory." - ".$title;
     $content=fopen("$type/$articleName.html","w");
 
@@ -145,7 +132,6 @@ $bodyVar = $bodyPartStart.$newBody.$bodyPartEnd;
       
 
     fwrite($content, "<html>");
-    fwrite($content, $pageTitle);
     fwrite($content,  $cssVar );
     fwrite($content, $headingVar);
     fwrite($content, $bodyVar);
@@ -162,15 +148,3 @@ $bodyVar = $bodyPartStart.$newBody.$bodyPartEnd;
 ?>
 
 <?php include "footer/footer.html" ?>
-<style type="text/css">
-  p,form,h2
-  {
-    margin-left: 20%;
-    margin-right: 20%;
-  }
-  textarea
-  {
-    width:95%;
-  }
-  
-</style>

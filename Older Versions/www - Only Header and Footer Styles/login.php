@@ -25,9 +25,7 @@ if (isset($_POST['submit']))
 	<title>Login</title>
 </head>
 <body>
-<form method="POST" class="loginbox" >
-	<br>
-	<h2>Login</h2>
+<form method="POST">
 	<p>Enter Username: <input type="text" name="userId"></p>
 	<p>Enter Password :  <input type="password" name="pwd"></p>
 	<input type="submit" name="submit" value="Login">
@@ -35,24 +33,3 @@ if (isset($_POST['submit']))
 </body>
 </html>
 <?php include "footer/footer.html" ?>
-<style type="text/css">
-	.loginbox
-	{
-		border: 2px dotted black;
-		display: inline-block;
-		margin: 10px;
-	}
-	form
-	{
-		padding: 10px;
-		margin-left: 10%;
-		margin-right: 10%;
-		width: 90%;
-	}
-	h2
-	{
-		background-color: black;
-		padding: 20px;
-		color: white;
-	}
-</style>

@@ -1,6 +1,5 @@
 <?php include "header/header.php" ?>
 <?php include "pageGenerator.php" ?>
-<?php include "Styles/ArticleColor.php" ?>
 
 <html>
 <title>Tutorials</title>
@@ -44,8 +43,7 @@ for($i=2;$i<9999;$i++)
        echo "<div class=col-md-4 col-xs-12>";
             echo"<div class=card flex-md-row mb-4 box-shadow h-md-250>";
                echo "<div class=card-body d-flex flex-column align-items-start>";
-               $randColor=generateRand(substr($t[$i], 0,strpos($t[$i], "-")));
-               echo" <strong class=$randColor>".substr($t[$i], 0,strpos($t[$i], "-"))."</strong>";
+               echo" <strong class=d-inline-block mb-2 text-primary>".substr($t[$i], 0,strpos($t[$i], "-"))."</strong>";
               echo"<h3 class=mb-0><p class=text-dark>".substr($t[$i], 0,strlen($t[$i])-5)."</p></h3>";
 
               echo"<div class=codesnippetscontent>";

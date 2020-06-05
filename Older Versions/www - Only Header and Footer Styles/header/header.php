@@ -54,13 +54,6 @@ session_start();
                             <a class="nav-link" href="contact.php">Contact</a>
                         </li>
                         <?php
-                        if ($_SESSION['loggedIn']==true) {
-                            
-                            echo '<li class="nav-item">';
-                            echo '<a class="nav-link" href="admintools.php">Admin</a>';
-                        echo "</li>";
-                        }?>
-                        <?php
                         if ($_SESSION['loggedIn']!=true) {
                             
                             echo '<li class="nav-item">';

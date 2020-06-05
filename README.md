@@ -15,19 +15,20 @@ How to use:
 
 Current functionalities:
 1. Header and Footer has inline css/bootstrap (depending on the version chosen) which can be modified separately while the base article css is in style.css file. Modifying the style.css file properties will effect all the article pages.
-2. Responsive design - may not be pretty but will work on most sizes and devices.
+2. Responsive design - Should work on most sizes and devices.
 3. Quotes(stored in a text file) are loaded and displayed randomly each time on banners.
 4. Contact us Page.
 5. Search functionality available (searches page titles in all postable folders)(Not efficient but works).
 6. Admintools page creates posts - currently 3 categories (articles/tutorials/code snippets) - can edit anytime as per the user's requirement.
 7. We can upload and add images,code snippets(textarea) to the created pages.
 8. Sessions and Authentication.
+9. Color Codes for Article Type (php,unity etc).
+10.Image upload has a 2MB limit (can be changed in image.php) and can only upload jpg,png and gif files(can also be changed).
 
 Upcoming features:
-1. Multiple JS slides and scrolls for use- just include the file name in index.php and replace the images.
-2. Better Search.
-3. Proper login system (only file system and no db in mind) with password reset.
+1. Better Search.
+2. Proper login system (only file system and no db in mind) with password reset.
 
 Credits:
-1. Basic FrontEnd and backend PHP by Chandradhar (https://github.com/chandradhargowtham).
-2. Front End Bootstrap by Srinivasa Sameer Addepalli (https://github.com/srinivas-sameer)
+1. Basic FrontEnd HTML/CSS and backend PHP by Chandradhar (https://github.com/chandradhargowtham).
+2. Front End HTML/Bootstrap by Srinivasa Sameer Addepalli (https://github.com/srinivas-sameer)
