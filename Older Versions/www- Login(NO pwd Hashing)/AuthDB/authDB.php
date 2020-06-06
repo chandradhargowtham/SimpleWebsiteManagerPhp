@@ -15,7 +15,7 @@ $file=fopen("AuthDB/authDB.txt", "r");
  	//echo "submi: ".$submittedUserName." and ".$submittedPwd;
  	//echo "DB: ".$userDetails[0]." and ".$userDetails[1]."|";
 
- 	if($userDetails[0]==$submittedUserName && $userDetails[1]==md5($submittedPwd))
+ 	if($userDetails[0]==$submittedUserName && $userDetails[1]==$submittedPwd)
  	{
  		//echo "ok";
  		$auth=true;

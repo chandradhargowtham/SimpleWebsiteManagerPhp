@@ -20,10 +20,10 @@ if ($adminpwd1=="pwd")
 		else
 		{
 			fclose($file);
-			$hashedPassword=md5($password1);
+			
 			$newestFile=fopen("authDB.txt", "a");
 			//fwrite($newestFile, $existingStuff."\n");
-			fwrite($newestFile, PHP_EOL.$Username1.":".$hashedPassword.":");
+			fwrite($newestFile, PHP_EOL.$Username1.":".$password1.":");
 			fclose($newestFile);
 			echo "<h2>Account Created Successfully.</h2>";
 			break;

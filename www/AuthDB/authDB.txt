@@ -1,5 +1,2 @@
-chan:pwd:
-user1:pwd1:
-chan:pwd:
-user2:pwd2:
-user3:pwd3:
+chan1:5f4dcc3b5aa765d61d8327deb882cf99:
+chan:5f4dcc3b5aa765d61d8327deb882cf99:

@@ -25,10 +25,11 @@ Current functionalities:
 8. Sessions, Authentication(create account and login) (.txt file system and not DB).
 9. Color Codes for Article Type (php,unity etc).
 10.Image upload has a 2MB limit (can be changed in image.php) and can only upload jpg,png and gif files(can also be changed).
+11. MD5 hashing for passwords.
 
 Upcoming features:
 1. Better Search.
-2. MD5 Hashing of passwords.
+2. Better hashing of passwords.
 3. Reset Password option.
 4. Admin password handler page - change root passwords at one place.
 
