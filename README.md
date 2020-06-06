@@ -6,13 +6,15 @@ Note:
 1. This is for people who know html and possibly php who do not want to spend time creating website from scratch. Most of the editing must be done in the php files.
 2. If you do not prefer editing anything, then this demo website should function properly without any specific setup/changes.
 3. This project was developed in PHP 7.2 and I specifically chose not to use any kind of database - Hence, the features can be limited like no sorting of posts by date etc. I might release a fully dynamic mySQL version later.
+4. I also have not used any Javascript (like form validation to keep it php only).
 
 How to use:
 1. Create a new post from the Admin tools page - login - "chan" and "pwd".
 2. You can see all the posts in the code snippets,tutorials or articles page (selected when creating a post).
 3. When code snippet,tutorial or article pages are opened, new php links are generated and assigned automatically.
 4. All the temporary files start with Zarticle (for easy deletion) and will be in the root folder - They will be generated every time the page is opened.
-5. New Account can be created from AuthDB/createAccount.php page.
+5. New Account can be created from AuthDB/createAccount.php page - Admin password - "pwd" - (you can change it there).
+5a.This Admin password option is to enforce invite only accounts. You can remove the option in the code anytime.
 
 Current functionalities:
 1. Header and Footer has inline css/bootstrap (depending on the version chosen) which can be modified separately while the base article css is in style.css file. Modifying the style.css file properties will effect all the article pages.
@@ -25,13 +27,14 @@ Current functionalities:
 8. Sessions, Authentication(create account and login) (.txt file system and not DB).
 9. Color Codes for Article Type (php,unity etc).
 10.Image upload has a 2MB limit (can be changed in image.php) and can only upload jpg,png and gif files(can also be changed).
-11. MD5 hashing for passwords.
+11.MD5 hashing for passwords.
+12.Reset Password option.
 
 Upcoming features:
 1. Better Search.
 2. Better hashing of passwords.
-3. Reset Password option.
-4. Admin password handler page - change root passwords at one place.
+3. Current reset password is not secure. Will generate temp token for password reset and email it.
+4. Form Validation (JS).
 
 Credits:
 1. Basic FrontEnd HTML/CSS and backend PHP by Chandradhar (https://github.com/chandradhargowtham).

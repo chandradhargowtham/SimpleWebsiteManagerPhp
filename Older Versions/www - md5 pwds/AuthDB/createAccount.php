@@ -47,7 +47,7 @@ else
 <form method="POST" class="loginbox" >
 	<br>
 	<h2>Create Account</h2>
-	<p>Enter Email: <input type="text" name="userId"></p>
+	<p>Enter Username: <input type="text" name="userId"></p>
 	<p>Enter Password :  <input type="password" name="pwd"></p>
 	<p>Admin Password :  <input type="password" name="adminpwd"></p>
 	<input type="submit" name="submit" value="Create Account">

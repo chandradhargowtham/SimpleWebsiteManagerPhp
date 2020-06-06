@@ -8,12 +8,10 @@ $password=$_POST['pwd'];
 if (isset($_POST['submit'])) 
 {
 	$auth=getAuthData($userName,$password);
-
+	
 		if($auth)
 		{
 			$_SESSION['loggedIn']=true;
-			$_SESSION['User']=$userName;
-			$_SESSION['password']=md5($password);
 			header("Location: admintools.php");
 			echo "Login Successful.";
 		}else
@@ -35,10 +33,9 @@ if (isset($_POST['submit']))
 <form method="POST" class="loginbox" >
 	<br>
 	<h2>Login</h2>
-	<p>Enter Email: <input type="text" name="userId"></p>
+	<p>Enter Username: <input type="text" name="userId"></p>
 	<p>Enter Password :  <input type="password" name="pwd"></p>
 	<input type="submit" name="submit" value="Login">
-	<a href= "AuthDB/resetpasswordEmail.php"> Forgot Password?</a>
 </form>
 </body>
 </html>
