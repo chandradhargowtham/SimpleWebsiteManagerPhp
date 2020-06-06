@@ -1,5 +1,6 @@
 <?php
-
+if($_SESSION['loggedIn']!=true)
+session_start();
 ?>
 <!doctype html>
 <html lang="en">

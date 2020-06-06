@@ -1,23 +1,18 @@
 <?php
 session_start();
-
-require "AuthDB/authDB.php";
-
 $userName=$_POST['userId'];
 $password=$_POST['pwd'];
 if (isset($_POST['submit'])) 
 {
-	$auth=getAuthData($userName,$password);
 	
-		if($auth)
+		if($userName=="chan" && $password=="pwd")
 		{
 			$_SESSION['loggedIn']=true;
 			header("Location: admintools.php");
 			echo "Login Successful.";
 		}else
 		{
-			//echo "failed";
-			echo '<h2>Invalid Login</h2>';
+			echo "failed";
 			session_destroy();
 		}
 }

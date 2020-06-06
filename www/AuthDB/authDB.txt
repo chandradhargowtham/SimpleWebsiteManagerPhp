@@ -1,0 +1,5 @@
+chan:pwd:
+user1:pwd1:
+chan:pwd:
+user2:pwd2:
+user3:pwd3:
