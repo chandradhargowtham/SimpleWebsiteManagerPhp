@@ -1,29 +1,24 @@
-<?php 
-session_start();
-?>
-<?php include "header/header.php" ?>
+<html>
+<body class = "bodyHeader">
+<p><br>Featured Articles:</p>
+<h2></h2></body>
+</html>
 <?php include "pageGenerator.php" ?>
 <?php include "Styles/ArticleColor.php" ?>
-<html>
-<title>Code Snippets</title>
-<?php 
 
-echo "<section id=codesnippetssection>";
-echo "<h1 id=codesnippetsheader>Code Snippets</h1>";
-
-
+<?php
 $dir = "/codesnippets/";
 $c=scandir("codesnippets/");
 
-for($i=2;$i<9999;$i++)
+for($i=2;$i<4;$i++)
 {
-	if(empty($c[$i]))
-{
-	break;
-}
-
+  if($c[$i]=="")
+  {
+    break;
+  }
     $path= "codesnippets/$c[$i]";
 
+    
     echo "<div class=container-fluid>";
       echo "<div class=row>";
        echo "<div class=col-md-4 col-xs-12>";
@@ -46,14 +41,35 @@ for($i=2;$i<9999;$i++)
 echo"</div>";
 echo"</div>";
 echo" </div>";
-echo"</section>";
+echo"</section><br>";
 
 	if($i%3==0)
 	{
 		echo "<br>";
 	}
 }
-?>
-</html>
 
-<?php include "footer/footer.html" ?>
+?>
+<!DOCTYPE html>
+
+
+<!-- Inline CSS for easy editing-->
+<style>
+
+</style>
+<script language="javascript">
+</script>
+
+<style type="text/css">
+
+body
+{
+  margin-left: 15px;
+  margin-right: 15px;
+  
+}
+body>p
+{
+  margin: 20px;
+}  
+</style>

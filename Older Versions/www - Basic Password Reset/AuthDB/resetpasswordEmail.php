@@ -1,18 +1,10 @@
 <?php
 if(isset($_POST['submit']))
-{	
-	$email=$_POST['userId'];
-	
-	
-	$file=fopen("passwordResetRequest.txt", "a");
-	$randnum=rand(10000,99999);
-	fwrite($file, PHP_EOL.$email.":".$randnum);
-	fclose($file);
+{
+	$msg = 'http://www.learn.misplacedminds.com/AuthDB/newPassword.php';
 	// send email
-	$msg = '{WebsiteName}/AuthDB/newPassword.php'."\n". "RESET CODE: $randnum";
-	//echo $msg;
 	mail($email,"Reset Password",$msg);
-	echo '<h2>Please check your email for further instructions.</h2>';
+	echo "Please check your email for further instructions.";
 }
 ?>
 <!DOCTYPE html>

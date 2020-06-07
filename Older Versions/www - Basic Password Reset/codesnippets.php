@@ -1,58 +1,40 @@
-<?php 
-session_start();
-?>
 <?php include "header/header.php" ?>
 <?php include "pageGenerator.php" ?>
 <?php include "Styles/ArticleColor.php" ?>
-
 <html>
-<title>Articles</title>
-<style>
-#articlesheader {
-    text-align: center;
-    font-size: 26px;
-    font-weight: 700;
-    padding: 20px 0;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    color: #000000;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    box-shadow: 0px 8px 40px #00000040;
-    opacity: 1;
-}
-</style>
+<title>Code Snippets</title>
 <?php 
 
+echo "<section id=codesnippetssection>";
+echo "<h1 id=codesnippetsheader>Code Snippets</h1>";
 
-echo "<section id=articlessection>";
-echo "<h1 id=articlesheader>Articles</h1>";
 
-
-$dir = "/articles/";
-$a=scandir("articles/");
+$dir = "/codesnippets/";
+$c=scandir("codesnippets/");
 
 for($i=2;$i<9999;$i++)
 {
-	if(empty($a[$i]))
+	if(empty($c[$i]))
 {
 	break;
 }
 
-    $path= "articles/$a[$i]";
-    
+    $path= "codesnippets/$c[$i]";
+
     echo "<div class=container-fluid>";
       echo "<div class=row>";
        echo "<div class=col-md-4 col-xs-12>";
             echo"<div class=card flex-md-row mb-4 box-shadow h-md-250>";
                echo "<div class=card-body d-flex flex-column align-items-start>";
-               $randColor=generateRand(substr($a[$i], 0,strpos($a[$i], "-")));
-               echo" <strong class=$randColor>".substr($a[$i], 0,strpos($a[$i], "-"))."</strong>";
-              echo"<h3 class=mb-0><p class=text-dark>".substr($a[$i], 0,strlen($a[$i])-5)."</p></h3>";
+               $randColor=generateRand(substr($c[$i], 0,strpos($c[$i], "-")));
+               echo" <strong class=$randColor>".substr($c[$i], 0,strpos($c[$i], "-"))."</strong>";
+               echo"<h3 class=mb-0><p class=text-dark>".substr($c[$i], 0,strlen($c[$i])-5)."</p></h3>";
 
               echo"<div class=codesnippetscontent>";
                 echo"<p class=card-text mb-auto>"; 
                 echo "</p>";
-                $str=generatePage($a[$i],"articles");
+                $str=generatePage($c[$i],"codesnippets");
+                
                 echo '<a href="'.$str.'">'."Go to Article".'</a>';
                 //echo '<a type=button class=btn btn-outline-dark href="' . $path . '">'."Read More".'</a>';   
               echo"</div>";
