@@ -1,1 +1,1 @@
-<?php include "header/header.php" ?><br><br><br><?php include "codesnippets/Unity - test.html" ?><?php include "footer/footer.html" ?>
+<?php include "header/header.php" ?><br><br><br><?php include "articles/Unity - test.html" ?><?php include "footer/footer.html" ?>

@@ -86,22 +86,8 @@ if(isset($_POST["title"]))
 if(strpos($articleContent, "\n"))
         {
           $newBody=str_replace("\n","<br>",$articleContent);    
-        }else
-        {
-          $newBody = $articleContent;
         }
-        
-    if(strpos($newBody, "<textarea"))
-        {
-    $finalsbody1=str_replace("&lit", "&lt", $newBody);
-      $finalsbody2=str_replace("&git", "&gt", $finalsbody1);
-      $bodyVar = $bodyPartStart.$finalsbody2.$bodyPartEnd;
-      
-}else
-{
-  
-  $bodyVar = $bodyPartStart.$newBody.$bodyPartEnd;
-}
+    $bodyVar = $bodyPartStart.$newBody.$bodyPartEnd;
     fwrite($content, "<html>");
     fwrite($content, $pageTitle);
     fwrite($content,  $cssVar );
@@ -122,20 +108,8 @@ if(strpos($articleContent, "\n"))
 if(strpos($articleContent, "\n"))
         {
           $newBody=str_replace("\n","<br>",$articleContent);    
-        }else
-        {
-          $newBody = $articleContent;
         }
-if(strpos($newBody, "<textarea") || strpos($newBody, "&git"))
-        {
-        $finalsbody1=str_replace("&lit", "&lt", $newBody);
-      $finalsbody2=str_replace("&git", "&gt", $finalsbody1);
-      $bodyVar = $bodyPartStart.$finalsbody2.$bodyPartEnd;
-}else
-{
-  
-  $bodyVar = $bodyPartStart.$newBody.$bodyPartEnd;
-}
+$bodyVar = $bodyPartStart.$newBody.$bodyPartEnd;
     fwrite($content, "<html>");
     fwrite($content, $pageTitle);
     fwrite($content,  $cssVar );
@@ -149,7 +123,7 @@ if(strpos($newBody, "<textarea") || strpos($newBody, "&git"))
   {
     $pageTitle='<head><title>'.'$title'.'</title></head>';
     $articleName= $ArticleCategory." - ".$title;
-    $content=fopen("$type/$articleName.html","w ");
+    $content=fopen("$type/$articleName.html","w");
 
     
     $headingVar= $headingPartStart.$title.$headingPartEnd;
@@ -162,22 +136,13 @@ if(strpos($newBody, "<textarea") || strpos($newBody, "&git"))
         if(strpos($articleContent, "\n"))
         {
           $newBody=str_replace("\n","<br>",$articleContent);    
-        }else
-        {
-          $newBody = $articleContent;
         }
         
         
-        if(strpos($newBody, "<textarea"))
-        {
-      $finalsbody1=str_replace("&lit", "&lt", $newBody);
-      $finalsbody2=str_replace("&git", "&gt", $finalsbody1);
-      $bodyVar = $bodyPartStart.$finalsbody2.$bodyPartEnd;
-      }else
-{
-  
-  $bodyVar = $bodyPartStart.$newBody.$bodyPartEnd;
-}
+        
+      
+      $bodyVar = $bodyPartStart.$newBody.$bodyPartEnd;
+      
 
     fwrite($content, "<html>");
     fwrite($content, $pageTitle);

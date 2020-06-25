@@ -24,10 +24,7 @@ if($_SESSION['loggedIn']!=true)
 <?php
 if (isset($_POST['textarea'])) 
 {
-	$ohyeah=$_POST['textarea'];
-	$newText= str_replace("<", "&lit",$ohyeah );
-	$finalText= str_replace(">", "&git",$newText );
-	$string="<b>Code Snippet</b><br>"."<textarea readonly>".$finalText."</textarea>";
+	$string="<b>Code Snippet</b><br>"."<textarea readonly>".$_POST['textarea']."</textarea>";
 	echo "Paste this code in you content area in the Admin Tools Page.";
 	echo "<input type='text' value='$string''>";	
 	echo "You can close this window after copying the text.";
